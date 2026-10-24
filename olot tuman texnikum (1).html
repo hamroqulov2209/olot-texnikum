@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olot tuman texnikumi — Rasmiy axborot portali</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Turli xil Scroll Animatsiyalari */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-zoom {
+            opacity: 0;
+            transform: scale(0.88);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-active {
+            opacity: 1 !important;
+            transform: translate(0, 0) scale(1) !important;
+        }
+
+        /* Gradient fon */
+        .hero-bg {
+            background: radial-gradient(circle at top right, #1e40af, #0f172a 70%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- YUQORI RASMIY PANEL -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5 font-medium text-white">
+                    <i class="fa-solid fa-building-columns text-blue-400"></i>
+                    Oliy ta'lim, fan va innovatsiyalar vazirligi
+                </span>
+                <span class="hidden md:inline text-slate-600">|</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> Buxoro viloyati, Olot tumani, Yoshbotir MFY</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span><i class="fa-regular fa-clock text-emerald-400 mr-1"></i> Dush–Shan: 08:30 – 17:30</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-blue-700 flex items-center justify-center text-white font-extrabold text-xl shadow-md shadow-blue-700/30">
+                    OT
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg leading-tight text-slate-900">OLOT TUMAN TEXNIKUMI</h1>
+                    <p class="text-xs text-blue-600 font-semibold">Zamonaviy kasb-hunar maskani</p>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
+                <a href="#tarix" class="hover:text-blue-600 transition">Texnikum tarixi</a>
+                <a href="#yonalishlar" class="hover:text-blue-600 transition">Yo‘nalishlar</a>
+                <a href="#rahbariyat" class="hover:text-blue-600 transition">Rahbariyat va Ustozlar</a>
+                <a href="#hujjatlar" class="hover:text-blue-600 transition">Qabul hujjatlari</a>
+                <a href="#manzil" class="hover:text-blue-600 transition">Manzil</a>
+            </nav>
+
+            <a href="#hujjatlar" class="bg-blue-700 hover:bg-blue-800 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition shadow-md shadow-blue-700/20">
+                Qabul 2026/2027
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg text-white py-20 lg:py-28 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="reveal-left">
+                <div class="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 text-blue-300 px-3.5 py-1.5 rounded-full text-xs font-bold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    2026/2027 O‘QUV YILI QABULI YOPIQ!
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+                    Kelajak kasblarini <span class="text-amber-400">Olot tuman texnikumida</span> egallang!
+                </h2>
+                <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                    Axborot texnologiyalari, apparat va dasturiy ta’minot, avto-mexanika hamda qishloq xo‘jaligi va sanoat yo‘nalishlarida chuqurlashtirilgan amaliy ta’lim va davlat namunadagi diplom.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#hujjatlar" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold px-6 py-3.5 rounded-xl transition flex items-center gap-2">
+                        <i class="fa-solid fa-file-signature"></i> Kerakli hujjatlar ro‘yxati
+                    </a>
+                    <button onclick="toggleChat()" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-6 py-3.5 rounded-xl transition flex items-center gap-2">
+                        <i class="fa-solid fa-robot text-blue-300"></i> AI Yordamchidan so‘rash
+                    </button>
+                </div>
+            </div>
+
+            <!-- JONLI STATISTIKA KARTALARI -->
+            <div class="grid grid-cols-2 gap-4 reveal-zoom">
+                <div class="bg-white/10 backdrop-blur-md border border-white/15 p-6 rounded-2xl">
+                    <i class="fa-solid fa-user-graduate text-3xl text-amber-400 mb-3"></i>
+                    <div class="text-3xl font-extrabold">920+</div>
+                    <div class="text-sm text-slate-300 mt-1">Faol o‘quvchilar soni</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md border border-white/15 p-6 rounded-2xl">
+                    <i class="fa-solid fa-chalkboard-user text-3xl text-emerald-400 mb-3"></i>
+                    <div class="text-3xl font-extrabold">65+</div>
+                    <div class="text-sm text-slate-300 mt-1">Malakali ustoz va murabbiylar</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md border border-white/15 p-6 rounded-2xl">
+                    <i class="fa-solid fa-award text-3xl text-blue-400 mb-3"></i>
+                    <div class="text-3xl font-extrabold">180+</div>
+                    <div class="text-sm text-slate-300 mt-1">Milliy va IT-sertifikat sohiblari</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md border border-white/15 p-6 rounded-2xl">
+                    <i class="fa-solid fa-briefcase text-3xl text-purple-400 mb-3"></i>
+                    <div class="text-3xl font-extrabold">89%</div>
+                    <div class="text-sm text-slate-300 mt-1">Bitiruvchilar bandlik darajasi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. TEXNIKUM TARIXI VA KELIB CHIQISHI -->
+    <section id="tarix" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal-up">
+            <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Bizning o‘tmish va bugun</span>
+            <h3 class="text-3xl font-extrabold text-slate-900 mt-2">Olot tuman texnikumi tarixi</h3>
+            <p class="text-slate-600 mt-3">Sobiq Olot Qishloq xo‘jaligi kasb-hunar kolleji negizida tashkil topgan zamonaviy ta’lim maskanimizning rivojlanish bosqichlari.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200 relative reveal-left">
+                <span class="inline-block bg-blue-100 text-blue-800 font-extrabold px-3 py-1 rounded-lg text-sm mb-4">1984–2004 yillar</span>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Ilk poydevor va tashkil topishi</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Muassasa dastlab Olot tumani yoshlarini qishloq xo‘jaligi, mexanizatsiya va texnik kasblarga o‘qitish maskani sifatida tashkil etilib, minglab mutaxassislarni yetishtirib chiqargan.
+                </p>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200 relative reveal-up">
+                <span class="inline-block bg-amber-100 text-amber-800 font-extrabold px-3 py-1 rounded-lg text-sm mb-4">2005–2019 yillar</span>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Olot Qishloq xo‘jaligi KHK davri</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    <b>Olot Qishloq xo‘jaligi kasb-hunar kolleji</b> sifatida faoliyat yuritib, o‘quv binolari, ustaxonalar va kompyuter sinflari zamonaviy jihozlandi.
+                </p>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200 relative reveal-right">
+                <span class="inline-block bg-emerald-100 text-emerald-800 font-extrabold px-3 py-1 rounded-lg text-sm mb-4">2020 yildan hozirgacha</span>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Zamonaviy Texnikum maqomi</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Prezident farmoniga asosan muassasaga <b>Olot tuman texnikumi</b> maqomi berildi. Dual ta’lim, IT va apparat-dasturiy ta’minot yo‘nalishlari ochildi hamda oliygohlarga 2-kursdan suhbat asosida kirish imkoniyati yaratildi.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. YO'NALISHLAR VA SERTIFIKATLAR -->
+    <section id="yonalishlar" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 reveal-up">
+                <div>
+                    <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Kasb-hunar va IT</span>
+                    <h3 class="text-3xl font-extrabold mt-2">Mavjud o‘quv yo‘nalishlari</h3>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md mt-2 md:mt-0">
+                    Bitiruvchilarga davlat namunadagi diplom hamda xalqaro va milliy darajadagi malaka sertifikatlari beriladi.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- IT Yo'nalishi -->
+                <div class="bg-gradient-to-b from-blue-900/60 to-slate-800 border-2 border-blue-500 p-7 rounded-2xl reveal-left">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">ENG TALABGIR YO‘NALISH</span>
+                        <i class="fa-solid fa-laptop-code text-2xl text-blue-400"></i>
+                    </div>
+                    <h4 class="text-xl font-extrabold mb-2">Apparat va dasturiy ta’minot sozlovchisi</h4>
+                    <p class="text-slate-300 text-sm mb-4">
+                        Kompyuter arxitekturasi, lokal tarmoqlar, veb-dasturlash, operatsion tizimlarni o‘rnatish va texnik xizmat ko‘rsatish.
+                    </p>
+                    <div class="text-xs text-blue-300 space-y-1.5 border-t border-slate-700 pt-4">
+                        <div><i class="fa-solid fa-certificate text-amber-400 mr-1.5"></i> <b>Sertifikatlar:</b> IT-Park, One Million Uzbek Coders, Cisco</div>
+                        <div><i class="fa-regular fa-clock text-emerald-400 mr-1.5"></i> <b>Muddat:</b> 2 yil (Kunduzgi / Dual)</div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 border border-slate-700 p-7 rounded-2xl reveal-up">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-slate-700 text-slate-300 text-xs font-bold px-3 py-1 rounded-full">TEXNIKA VA SERVIS</span>
+                        <i class="fa-solid fa-car-wrench text-2xl text-amber-400"></i>
+                    </div>
+                    <h4 class="text-xl font-extrabold mb-2">Avtomobillarga texnik xizmat ko‘rsatish</h4>
+                    <p class="text-slate-300 text-sm mb-4">
+                        Zamonaviy avtomobil dvigatellari, elektron diagnostika uskunalari bilan ishlash va avto-elektrika.
+                    </p>
+                    <div class="text-xs text-slate-300 space-y-1.5 border-t border-slate-700 pt-4">
+                        <div><i class="fa-solid fa-certificate text-amber-400 mr-1.5"></i> <b>Malaka:</b> 3-4 razryadli avto-mexanik + "BC" toifa</div>
+                        <div><i class="fa-regular fa-clock text-emerald-400 mr-1.5"></i> <b>Muddat:</b> 2 yil</div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 border border-slate-700 p-7 rounded-2xl reveal-right">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-slate-700 text-slate-300 text-xs font-bold px-3 py-1 rounded-full">IQTISODIYOT VA SANOAT</span>
+                        <i class="fa-solid fa-calculator text-2xl text-emerald-400"></i>
+                    </div>
+                    <h4 class="text-xl font-extrabold mb-2">Buxgalteriya hisobi va audit / Payvandlash ishi</h4>
+                    <p class="text-slate-300 text-sm mb-4">
+                        1C Buxgalteriya dasturi, moliya hisobotlari hamda sanoat korxonalari uchun elektr-gaz payvandlash texnologiyalari.
+                    </p>
+                    <div class="text-xs text-slate-300 space-y-1.5 border-t border-slate-700 pt-4">
+                        <div><i class="fa-solid fa-certificate text-amber-400 mr-1.5"></i> <b>Sertifikat:</b> Milliy kasbiy malaka sertifikati</div>
+                        <div><i class="fa-regular fa-clock text-emerald-400 mr-1.5"></i> <b>Muddat:</b> 2 yil</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. RAHBARIYAT, YETAKCHILAR VA USTOZLAR -->
+    <section id="rahbariyat" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-10 reveal-up">
+            <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Bizning jamoa</span>
+            <h3 class="text-3xl font-extrabold text-slate-900 mt-2">Rahbariyat, Yetakchilar va Ustozlar</h3>
+            <p class="text-slate-600 mt-2">Texnikumimizda faoliyat yuritayotgan rahbar xodimlar, yoshlar yetakchilari va ilg‘or pedagoglar tarkibi.</p>
+        </div>
+
+        <!-- Bo'lim filtri tugmalari -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12 reveal-zoom">
+            <button onclick="filterStaff('all', this)" class="staff-btn bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-bold transition shadow-md shadow-blue-700/20">Barchasi</button>
+            <button onclick="filterStaff('rahbar', this)" class="staff-btn bg-white border border-slate-300 text-slate-700 px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-slate-100 transition">Direktor va o‘rinbosarlar</button>
+            <button onclick="filterStaff('yetakchi', this)" class="staff-btn bg-white border border-slate-300 text-slate-700 px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-slate-100 transition">Yoshlar yetakchilari</button>
+            <button onclick="filterStaff('ustoz', this)" class="staff-btn bg-white border border-slate-300 text-slate-700 px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-slate-100 transition">Fan va amaliyot ustozlari</button>
+        </div>
+
+        <!-- Jamoa kartalari -->
+        <div id="staffGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Direktor -->
+            <div data-role="rahbar" class="staff-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm reveal-left">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Direktor" class="w-full h-56 object-cover">
+                <div class="p-5">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-extrabold px-2.5 py-1 rounded">TEXNIKUM DIREKTORI</span>
+                    <h4 class="font-extrabold text-lg text-slate-900 mt-2">Ro‘ziyev Baxtiyor</h4>
+                    <p class="text-xs text-slate-500 mt-1">Oliy toifali rahbar, ta’lim boshqaruvi bo‘yicha 20 yillik tajriba</p>
+                    <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600">
+                        <i class="fa-regular fa-clock text-blue-600 mr-1"></i> Qabul: Har kuni 09:00 – 16:00
+                    </div>
+                </div>
+            </div>
+
+            <!-- O'quv ishlari bo'yicha o'rinbosar -->
+            <div data-role="rahbar" class="staff-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm reveal-up">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="O'rinbosar" class="w-full h-56 object-cover">
+                <div class="p-5">
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-extrabold px-2.5 py-1 rounded">DIREKTOR O‘RINBOSARI</span>
+                    <h4 class="font-extrabold text-lg text-slate-900 mt-2">Qodirov Shuhrat</h4>
+                    <p class="text-xs text-slate-500 mt-1">O‘quv va dual ta’lim ishlari bo‘yicha direktor o‘rinbosari</p>
+                    <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600">
+                        <i class="fa-solid fa-award text-amber-500 mr-1"></i> Kasbiy ta’lim a’lochisi
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yoshlar masalalari bo'yicha o'rinbosar -->
+            <div data-role="rahbar" class="staff-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm reveal-up">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="MMIBDO" class="w-full h-56 object-cover">
+                <div class="p-5">
+                    <span class="bg-purple-100 text-purple-800 text-xs font-extrabold px-2.5 py-1 rounded">DIREKTOR O‘RINBOSARI</span>
+                    <h4 class="font-extrabold text-lg text-slate-900 mt-2">Nazarova Dilnoza</h4>
+                    <p class="text-xs text-slate-500 mt-1">Ma’naviy-ma’rifiy ishlar va yoshlar masalalari bo‘yicha o‘rinbosar</p>
+                    <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600">
+                        <i class="fa-solid fa-star text-amber-500 mr-1"></i> Oliy toifali pedagog
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yoshlar yetakchisi -->
+            <div data-role="yetakchi" class="staff-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm reveal-right">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Yetakchi" class="w-full h-56 object-cover">
+                <div class="p-5">
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-2.5 py-1 rounded">YOSHLAR YETAKCHISI</span>
+                    <h4 class="font-extrabold text-lg text-slate-900 mt-2">Ergashev Javohir</h4>
+                    <p class="text-xs text-slate-500 mt-1">Yoshlar ittifoqi boshlang‘ich tashkiloti yetakchisi, "Zakovat" va sport klublari koordinatori</p>
+                    <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600">
+                        <i class="fa-solid fa-bolt text-emerald-600 mr-1"></i> Barcha tadbirlar tashkilotchisi
+                    </div>
+                </div>
+            </div>
+
+            <!-- Xotin-qizlar va to'garaklar yetakchisi -->
+            <div data-role="yetakchi" class="staff-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm reveal-left">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Yetakchi" class="w-full h-56 object-cover">
+                <div class="p-5">
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-2.5 py-1 rounded">BO‘LIM YETAKCHISI</span>
+                    <h4 class="font-extrabold text-lg text-slate-900 mt-2">Salimova Mohira</h4>
+                    <p class="text-xs text-slate-500 mt-1">Xotin-qizlar kengashi va kasb to‘garaklari yetakchisi</p>
+                    <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600">
+                        <i class="fa-solid fa-medal text-amber-500 mr-1"></i> "Yilning eng faol yetakchisi"
+                    </div>
+                </div>
+            </div>
+
+            <!-- IT ustozi -->
+            <div data-role="ustoz" class="staff-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm reveal-up">
+                <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=600&q=80" alt="IT Ustoz" class="w-full h-56 object-cover">
+                <div class="p-5">
+                    <span class="bg-amber-100 text-amber-800 text-xs font-extrabold px-2.5 py-1 rounded">MAXSUS FAN USTOZI</span>
+                    <h4 class="font-extrabold text-lg text-slate-900 mt-2">Jo‘rayev Sardor</h4>
+                    <p class="text-xs text-slate-500 mt-1">"Apparat va dasturiy ta’minot sozlovchisi" guruh rahbari va ustozi</p>
+                    <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600">
+                        <i class="fa-solid fa-certificate text-blue-600 mr-1"></i> Xalqaro IT va Cisco sertifikati
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avto ustoz -->
+            <div data-role="ustoz" class="staff-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm reveal-up">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Amaliyot ustozi" class="w-full h-56 object-cover">
+                <div class="p-5">
+                    <span class="bg-amber-100 text-amber-800 text-xs font-extrabold px-2.5 py-1 rounded">ISHLAB CHIQARISH TA’LIMI USTASI</span>
+                    <h4 class="font-extrabold text-lg text-slate-900 mt-2">Hamroyev Rustam</h4>
+                    <p class="text-xs text-slate-500 mt-1">Avtomobil tuzilishi va diagnostika ustaxonasi rahbari</p>
+                    <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600">
+                        <i class="fa-solid fa-wrench text-slate-700 mr-1"></i> 15 yillik amaliy tajriba
+                    </div>
+                </div>
+            </div>
+
+            <!-- Xorijiy til ustozi -->
+            <div data-role="ustoz" class="staff-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm reveal-right">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Ustoz" class="w-full h-56 object-cover">
+                <div class="p-5">
+                    <span class="bg-amber-100 text-amber-800 text-xs font-extrabold px-2.5 py-1 rounded">FAN O‘QITUVCHISI</span>
+                    <h4 class="font-extrabold text-lg text-slate-900 mt-2">Karimova Nilufar</h4>
+                    <p class="text-xs text-slate-500 mt-1">Ingliz tili va kasbiy muloqot fani o‘qituvchisi</p>
+                    <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600">
+                        <i class="fa-solid fa-globe text-emerald-600 mr-1"></i> CEFR C1 / IELTS 7.5 sohibasi
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. QABUL VA KERAKLI HUJJATLAR (BEVOSITA TEXNIKUM BINOSIDA) -->
+    <section id="hujjatlar" class="py-20 bg-blue-50 border-y border-blue-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-md border border-blue-200 reveal-zoom">
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <span class="bg-emerald-100 text-emerald-800 font-extrabold text-xs px-3.5 py-1.5 rounded-full">
+                            OVORAGARCHILIKSIZ VA TEZKOR QABUL
+                        </span>
+                        <h3 class="text-3xl font-extrabold text-slate-900 mt-4 mb-4">
+                            Hujjatlar bevosita texnikum binosida qabul qilinadi!
+                        </h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            Onlayn tizimlarda qiynalib o‘tirmang! 9-sinf va 11-sinf bitiruvchilari quyidagi hujjatlarni olib to‘g‘ridan-to‘g‘ri <b>Olot tuman texnikumi qabul komissiyasi (1-qavat, 102-xona)</b>ga murojaat qilishlari kifoya. Mas’ul ustozlarimiz o‘zlari ro‘yxatga kiritib berishadi.
+                        </p>
+
+                        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl text-sm text-amber-900">
+                            <b><i class="fa-solid fa-circle-info mr-1"></i> Eslatma (9-sinf bitiruvchilari uchun):</b> Hali pasport (ID-karta) olmagan o‘quvchilar <b>tug‘ilganlik haqidagi guvohnoma (metrika)</b> hamda ota-onasining pasport nusxasi bilan kelishadi.
+                        </div>
+                    </div>
+
+                    <!-- Kerakli hujjatlar ro'yxati -->
+                    <div class="bg-slate-900 text-white p-7 rounded-2xl space-y-4">
+                        <h4 class="text-xl font-extrabold text-amber-400 border-b border-slate-700 pb-3">
+                            <i class="fa-solid fa-folder-open mr-2"></i> Olib kelinadigan hujjatlar:
+                        </h4>
+                        <ul class="space-y-3.5 text-sm">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-400 text-lg mt-0.5"></i>
+                                <div>
+                                    <b>Shaxsni tasdiqlovchi hujjat:</b> Tug‘ilganlik haqida guvohnoma (metrika) yoki ID-karta / Pasport nusxasi.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-400 text-lg mt-0.5"></i>
+                                <div>
+                                    <b>Ota va onasining pasport nusxasi (kopiyasi):</b> 1 donadan.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-400 text-lg mt-0.5"></i>
+                                <div>
+                                    <b>Fotosurat:</b> 3x4 o‘lchamdagi rangli rasm — <b>6 dona</b>.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-400 text-lg mt-0.5"></i>
+                                <div>
+                                    <b>Ta’lim to‘g‘risida hujjat:</b> 9-sinf yoki 11-sinfni bitirganlik haqida shahodatnoma (attestat) asli.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. LOKATSIYA VA MANZIL (RASMDA BELGILANGAN "OLOT QISHLOQ XO'JALIGI KASB HUNAR KOLLEJI" NUQTASI BILAN) -->
+    <section id="manzil" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+            <div class="reveal-left">
+                <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Bizning manzil</span>
+                <h3 class="text-3xl font-extrabold text-slate-900 mt-2 mb-4">Texnikumga qanday kelinadi?</h3>
+                <p class="text-slate-600 mb-6">
+                    Qabul komissiyasi har kuni (yakshanbadan tashqari) soat <b>08:30 dan 17:30 gacha</b> texnikumning asosiy binosida faoliyat yuritadi.
+                </p>
+
+                <div class="space-y-4 text-sm mb-6">
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-200">
+                        <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900">Aniq manzil:</div>
+                            <div class="text-slate-600">Olot tuman texnikumi — Buxoro viloyati, Olot tumani, Yoshbotir MFY (Google Xaritada eski nomi bilan: «Olot Qishloq xo‘jaligi Kasb-Hunar Kolleji»)</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-200">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-road"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900">Mo‘ljal:</div>
+                            <div class="text-slate-600">M37 xalqaro magistral yo‘li bo‘yida, Yoshbotir MFY profilaktika inspektori va Olot Tyfuk yaqinida.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Siz bergan Google Maps havolasi -->
+                <a href="https://maps.app.goo.gl/7Q7ovqLRzagw16xS9" target="_blank" class="inline-flex items-center gap-2.5 bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-3.5 rounded-xl transition shadow-md shadow-blue-700/20">
+                    <i class="fa-solid fa-map-location-dot text-lg text-amber-300"></i>
+                    Google Xaritada ochish (GPS lokatsiya)
+                </a>
+            </div>
+
+            <!-- Sun'iy yo'ldosh (Satellite) xaritasi aynan belgilangan bino ustida -->
+            <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-blue-200 h-96 relative group reveal-right">
+                <iframe 
+                    src="https://maps.google.com/maps?q=39.4250257,63.7957798&t=k&z=18&output=embed" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+                <div class="absolute top-4 left-4 bg-white/95 text-slate-900 text-xs font-bold px-4 py-2.5 rounded-xl shadow-lg border border-blue-200 leading-snug">
+                    <div class="text-blue-700"><i class="fa-solid fa-location-dot mr-1.5"></i>Olot tuman texnikumi</div>
+                    <div class="text-[10px] font-medium text-slate-500">(sobiq Olot Qishloq xo‘jaligi kasb-hunar kolleji)</div>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=39.4250257,63.7957798" target="_blank" class="absolute bottom-4 right-4 bg-slate-900/90 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-lg backdrop-blur-sm transition flex items-center gap-2">
+                    <i class="fa-solid fa-up-right-from-square"></i> Xaritada yo‘nalish olish
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800 text-center text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-bold text-white text-base mb-1">© 2026 Olot tuman texnikumi — Rasmiy axborot portali</p>
+            <p class="text-xs text-slate-500">
+                Ushbu platforma <b>"Apparat va dasturiy ta’minot sozlovchisi"</b> yo‘nalishi 2-kurs o‘quvchisi tomonidan o‘quv amaliyoti doirasida ishlab chiqildi.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         AQLLI AI YORDAMCHI CHATBOT VIDJETI
+         ========================================== -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <!-- Chat oynasi -->
+        <div id="aiChatWindow" class="hidden w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden mb-4">
+            <div class="bg-blue-700 text-white p-4 flex justify-between items-center">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
+                        <i class="fa-solid fa-robot text-lg"></i>
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-sm">Texnikum AI Yordamchisi</div>
+                        <div class="text-[11px] text-emerald-300 flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span> Savollarga 24/7 javob beradi
+                        </div>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="text-white/80 hover:text-white text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Xabarlar maydoni -->
+            <div id="chatMessages" class="p-4 h-72 overflow-y-auto space-y-3 bg-slate-50 text-sm">
+                <div class="bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-none text-slate-700 shadow-sm">
+                    Assalomu alaykum! 👋 Men <b>Olot tuman texnikumi AI yordamchisiman</b>. Qabul hujjatlari, yo‘nalishlar, ustozlar yoki manzil haqida savolingizni yozing!
+                </div>
+                <!-- Tezkor savol tugmalari -->
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                    <button onclick="askQuick('Qanday hujjatlar kerak?')" class="text-xs bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold px-2.5 py-1.5 rounded-lg transition">📄 Qanday hujjatlar kerak?</button>
+                    <button onclick="askQuick('Qanday yo‘nalishlar bor?')" class="text-xs bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold px-2.5 py-1.5 rounded-lg transition">💻 Yo‘nalishlar</button>
+                    <button onclick="askQuick('Manzil qayerda joylashgan?')" class="text-xs bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold px-2.5 py-1.5 rounded-lg transition">📍 Manzil va mo‘ljal</button>
+                </div>
+            </div>
+
+            <!-- Input -->
+            <form onsubmit="handleChatSubmit(event)" class="p-3 bg-white border-t border-slate-200 flex gap-2">
+                <input id="chatInput" type="text" placeholder="Savolingizni yozing..." class="flex-1 bg-slate-100 text-sm px-3.5 py-2.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white px-4 rounded-xl transition">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Suzuvchi tugma -->
+        <button onclick="toggleChat()" class="bg-blue-700 hover:bg-blue-800 text-white px-5 py-3.5 rounded-full shadow-xl flex items-center gap-2.5 font-bold text-sm transition transform hover:scale-105 ml-auto">
+            <i class="fa-solid fa-robot text-lg text-amber-300"></i>
+            <span>AI Savol-Javob</span>
+        </button>
+    </div>
+
+    <!-- JAVASCRIPT: SCROLL ANIMATSIYA, FILTR VA AI CHAT -->
+    <script>
+        // 1. Scroll bo'lganda har bir blokni animatsiya bilan chiqarish
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-zoom').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 2. Rahbariyat va Ustozlar filtri (Tugma rangi o'zgarishi bilan)
+        function filterStaff(role, clickedBtn) {
+            const buttons = document.querySelectorAll('.staff-btn');
+            buttons.forEach(btn => {
+                btn.className = "staff-btn bg-white border border-slate-300 text-slate-700 px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-slate-100 transition";
+            });
+
+            if (clickedBtn) {
+                clickedBtn.className = "staff-btn bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-bold transition shadow-md shadow-blue-700/20";
+            }
+
+            const cards = document.querySelectorAll('.staff-card');
+            cards.forEach(card => {
+                if (role === 'all' || card.dataset.role === role) {
+                    card.style.display = 'block';
+                    setTimeout(() => card.classList.add('reveal-active'), 50);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 3. AI Chatbot mantiqi
+        function toggleChat() {
+            const win = document.getElementById('aiChatWindow');
+            win.classList.toggle('hidden');
+        }
+
+        function askQuick(question) {
+            document.getElementById('chatInput').value = question;
+            handleChatSubmit(new Event('submit'));
+        }
+
+        function handleChatSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('chatInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const box = document.getElementById('chatMessages');
+            
+            box.innerHTML += `
+                <div class="bg-blue-700 text-white p-3 rounded-2xl rounded-tr-none ml-auto max-w-[85%]">
+                    ${text}
+                </div>
+            `;
+            input.value = '';
+
+            const q = text.toLowerCase();
+            let reply = "Savolingiz uchun rahmat! Batafsil ma'lumot olish uchun texnikum binosiga (1-qavat, 102-xona) Dushanbadan Shanbagacha soat 08:30 dan 17:30 gacha tashrif buyurishingiz mumkin.";
+
+            if (q.includes('hujjat') || q.includes('rasm') || q.includes('pasport') || q.includes('guvohnoma') || q.includes('9-sinf')) {
+                reply = "📌 <b>Kerakli hujjatlar:</b><br>1) Tug‘ilganlik guvohnomasi (yoki pasport);<br>2) Ota-onasining pasport nusxasi;<br>3) 3x4 rasm — 6 dona;<br>4) 9 yoki 11-sinf shahodatnomasi. Hujjatlar bevosita texnikum binosida qabul qilinadi!";
+            } else if (q.includes('yonalish') || q.includes('yo‘nalish') || q.includes('kasb') || q.includes('it') || q.includes('dastur')) {
+                reply = "💻 Bizda <b>Apparat va dasturiy ta’minot sozlovchisi (IT)</b>, Avtomobillarga texnik xizmat ko‘rsatish, Buxgalteriya hisobi va Payvandlash ishi yo‘nalishlari mavjud.";
+            } else if (q.includes('direktor') || q.includes('rahbar') || q.includes('ustoz') || q.includes('yetakchi')) {
+                reply = "👨‍🏫 Texnikumda 65+ malakali ustozlar, direktor va o‘rinbosarlar hamda Yoshlar yetakchilari faoliyat yuritadi. Ular haqida saytning 'Rahbariyat va Ustozlar' bo‘limida tanishishingiz mumkin.";
+            } else if (q.includes('tarix') || q.includes('qachon') || q.includes('kollej')) {
+                reply = "🏛 Muassasa 1984-yilda tashkil topgan, avval Olot Qishloq xo‘jaligi kasb-hunar kolleji bo‘lgan. 2020-yildan boshlab zamonaviy <b>Olot tuman texnikumi</b> maqomida faoliyat yuritmoqda.";
+            } else if (q.includes('manzil') || q.includes('qayerda') || q.includes('lokatsiya') || q.includes('mo‘ljal')) {
+                reply = "📍 Manzilimiz: Olot tumani, Yoshbotir MFY, M37 xalqaro yo‘li bo‘yida (xaritada sobiq Olot Qishloq xo‘jaligi KHK binosi).";
+            }
+
+            setTimeout(() => {
+                box.innerHTML += `
+                    <div class="bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-none text-slate-700 shadow-sm max-w-[90%]">
+                        ${reply}
+                    </div>
+                `;
+                box.scrollTop = box.scrollHeight;
+            }, 350);
+        }
+    </script>
+</body>
+</html>
