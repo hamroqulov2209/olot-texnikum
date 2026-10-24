@@ -53,6 +53,49 @@
             box-shadow: 0 28px 45px -14px rgba(15, 23, 42, 0.4);
         }
 
+        /* Quyosh nuri kabi yaltirash (kursor turgan joyda) */
+        .tilt-ready {
+            position: relative;
+            --mx: 50%;
+            --my: 50%;
+        }
+        .tilt-ready::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background:
+                radial-gradient(circle at var(--mx) var(--my),
+                    rgba(255, 255, 255, 0.95) 0%,
+                    rgba(255, 244, 200, 0.55) 14%,
+                    rgba(255, 214, 110, 0.28) 32%,
+                    rgba(255, 200, 80, 0) 62%);
+            mix-blend-mode: soft-light;
+        }
+        .tilt-ready::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+            background:
+                radial-gradient(circle at var(--mx) var(--my),
+                    rgba(255, 255, 255, 0.55) 0%,
+                    rgba(255, 235, 170, 0.25) 18%,
+                    rgba(255, 255, 255, 0) 45%);
+        }
+        .tilt-ready:hover::after,
+        .tilt-ready:hover::before {
+            opacity: 1;
+        }
+        .tilt-ready::after { z-index: 2; }
+
         /* Gradient fon */
         .hero-bg {
             background: radial-gradient(circle at top right, #1e40af, #0f172a 70%);
@@ -668,6 +711,9 @@
                     const r = el.getBoundingClientRect();
                     const px = (e.clientX - r.left) / r.width - 0.5;   // -0.5 (chap) ... 0.5 (o'ng)
                     const py = (e.clientY - r.top) / r.height - 0.5;   // -0.5 (tepa) ... 0.5 (past)
+                    // Yaltirash nuri kursor turgan joyga ergashadi
+                    el.style.setProperty('--mx', ((px + 0.5) * 100) + '%');
+                    el.style.setProperty('--my', ((py + 0.5) * 100) + '%');
                     const rotY = px * 2 * MAX_TILT;
                     const rotX = -py * 2 * MAX_TILT;
                     el.style.setProperty(
